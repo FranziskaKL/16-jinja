@@ -4,7 +4,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    first_name = "Sushiqueen"
+    last_name = "Rainbowroll"
+    animals = ["Giraffe", "Koala", "Elephant"]
+    return render_template("index.html", first_name=first_name, last_name=last_name, animals=animals)
 
 @app.route("/about")
 def about():

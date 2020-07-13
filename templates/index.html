@@ -1,5 +1,15 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Hallo ich bin Index</h1>
+    {% if animals %}
+        <h1>Hallo, {{first_name}} {{last_name}}. Ich bin Index.</h1>
+        <h2>My favorite animals are</h2>
+        <ul>
+            {% for animal in animals%}
+            <li>{{animal}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>Only works with exotic animals</h1>
+    {% endif %}
 {% endblock content %}
